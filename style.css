@@ -44,13 +44,13 @@ header{
     height: 3px; 
     background-color: black; 
     align-self: center;
+    margin-bottom: 1%;
 }
 
 #title{
     font-family: 'BreeSerif';
     align-self: center;
     font-size: 40px;
-    margin-bottom: 2%;
 }
 
 /* Sobre, Missão e valores */
@@ -119,6 +119,83 @@ p, li, h2{
 }
 
 
+/* Destaques do mês */
+#title2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5% 0%;
+}
+
+#subimg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto; 
+}
+
+.fire{
+    width: 5%;
+    margin: 0% 1%;
+    align-self: center;
+}
+
+
+/* Contatos */
+#contacts{
+    display: flex;
+    flex-direction: column;
+}
+
+#cttspace > h1 {
+    margin-bottom: 4%;
+}
+
+#footerpink{
+    margin-bottom: -7%;
+}
+
+#footerblue{
+    margin-bottom: -1%;
+}
+
+#cttspace{
+    background-color: #48A8F9;
+    display: flex;
+    flex-direction: column;
+}
+
+#icons{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+    gap: 3%;
+}
+
+.socialmedia {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+}
+
+
+.socialicon{
+    width: 40%;
+    height: auto;
+    align-self: center;
+}
+
+.vertical-line{
+    width: 2px; 
+    height: auto; 
+    background-color: black; 
+}
+
+
+/* Telas pequenas */
 @media screen and (max-width: 630px) { 
     #logo{
         width: 50%;
@@ -144,5 +221,9 @@ p, li, h2{
     .column{
         width: 80%;
         margin: 15% auto;
+    }
+    .socialicon{
+        width: 30%;
+        height: auto;
     }
 }

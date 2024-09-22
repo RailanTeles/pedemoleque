@@ -176,11 +176,16 @@ p, li, h2{
 }
 
 #footerpink{
-    margin-bottom: -7%;
+    margin-bottom: -8%;
 }
 
 #footerblue{
     margin-bottom: -1%;
+}
+
+.footerwaves{
+    margin-left: -2%;
+    margin-right: -2%;
 }
 
 #cttspace{

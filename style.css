@@ -142,6 +142,29 @@ p, li, h2{
 }
 
 
+/* Modelos */
+#roupas{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+}
+
+.divmodels{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: auto;
+    width: 100%;
+    height: auto;
+    margin-bottom: 8%;
+}
+
+.models{
+    width: 30%;
+    min-height: 100%;
+}
+
 /* Contatos */
 #contacts{
     display: flex;
@@ -218,12 +241,19 @@ p, li, h2{
         background-color: #d33699;
         padding: 3% 2% 3% 2%;
     }
+
     .column{
         width: 80%;
         margin: 15% auto;
     }
+
     .socialicon{
         width: 30%;
         height: auto;
+    }
+
+    .models {
+        width: calc(70% - 10px);
+        margin: 5% auto;
     }
 }

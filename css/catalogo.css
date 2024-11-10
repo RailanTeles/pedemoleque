@@ -161,12 +161,19 @@ header{
 }
 
 .selecttitle{
-    /* font-size: 50px; */
     font-family: 'Shantell';
 }
 
-/* Roupas Femininas */
-.SectionFen{
+/* Article */
+.ArticleClothes{
+    /* display: flex;
+    overflow: hidden; */
+    width: 100%;
+    height: auto;
+}
+
+/* Roupas */
+.SectionClothes{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -174,21 +181,24 @@ header{
     height: auto;
 }
 .subtitles{
+    font-size: 30px;
     font-family: 'BreeSerif';
 }
 #hrtilte{
-    width: 20%;
+    width: 30%;
     height: 3px; 
     background-color: black; 
     align-self: center;
     margin-bottom: 1%;
 }
-.linhapraia{
+.roupas{
     display: flex;
-    flex-direction: column;
     align-items: center;
     width: 100%;
     height: 100%;
+}
+.setas{
+    display: none;
 }
 .carroussel{
     display: flex;
@@ -229,22 +239,47 @@ header{
 
 /* Telas médias */
 @media screen and (max-width: 900px) {
+    /* Navbar */
     #ImgNavbar{
         width: 15%;
-        cursor: pointer;
     }
 
+    /* Seletor */
     .select{
         flex-direction: column;
         min-height: 30%;
         overflow: hidden;
     }
-    
     .sel{
         min-width: 100%;
         max-height: 100%;
-    }    
-
+    }
+    
+    /* Carrousel */
+    .roupas{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    .setas{
+        display: flex;
+        width: 10%;
+    }
+    .carroussel{
+        flex-wrap: nowrap;
+        width: 80%;
+        height: 100%;
+        align-items: center;
+        justify-content: start;
+        overflow: hidden;
+    }
+    .modelos{
+        min-width: 100%;
+        height: auto;
+        align-items: center;
+        transition: margin-left 0.5s ease; 
+    }
 }
 
 /* Telas pequenas */

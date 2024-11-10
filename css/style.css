@@ -1,12 +1,12 @@
 /* Fontes */
 @font-face {
     font-family: 'BreeSerif';
-    src: url(fonts/BreeSerif/BreeSerif-Regular.ttf);
+    src: url(../fonts/BreeSerif/BreeSerif-Regular.ttf);
 }
 
 @font-face {
     font-family: 'Shantell';
-    src: url(fonts/Shantell/static/ShantellSans-Regular.ttf);
+    src: url(../fonts/Shantell/static/ShantellSans-Regular.ttf);
 }
 
 /* Configuração geral */
@@ -58,7 +58,7 @@ header{
 #ImgNavbar{
     position: absolute;
     top: 0;
-    width: 18%;
+    width: 10%;
     cursor: pointer;
     border-radius: 50%;
     box-shadow: 0px 4px 8px rgba(255, 105, 180, 0.7);
@@ -307,7 +307,14 @@ p, li, h2{
     background-color: black; 
 }
 
+/*  Telas médias */
+@media screen and (max-width: 800px) {
+    #ImgNavbar{
+        width: 15%;
+        cursor: pointer;
+    }
 
+}
 /* Telas pequenas */
 @media screen and (max-width: 630px) { 
     /* Header */

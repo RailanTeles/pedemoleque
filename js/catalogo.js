@@ -20,6 +20,7 @@ overlay.addEventListener('click', function(){
 
 // Seletor
 const seletores = document.querySelectorAll(".sel");
+const feminina = document.querySelector('.Feminina')
 let position = 1
 
 seletores.forEach((seletor, index) => {
@@ -28,7 +29,7 @@ seletores.forEach((seletor, index) => {
         seletores.forEach(s => s.classList.remove("selactive"));
         
         seletor.classList.add("selactive");
-        // console.log(position); //Usar position para se referir a página buscada anteriormente
+        
         switch(index) {
             case 0:
                 seletor.style.backgroundColor = "#D33699";
@@ -43,6 +44,18 @@ seletores.forEach((seletor, index) => {
                 position = 2;
                 break;
         }
+        switch(index) {
+            case 0:
+                feminina.style.marginLeft = "0%";
+                break;
+            case 1:
+                feminina.style.marginLeft = "-100%";
+                break;
+            case 2:
+                feminina.style.marginLeft = "-200%";
+                break;
+        }
+
         seletores.forEach((s, i) => {
             if (i !== index) {
                 s.style.backgroundColor = ""; 
@@ -95,7 +108,6 @@ setaEsqrFemPraia.addEventListener('click', function(){
 })
 
 //  Feminino Roupas
-
 const setaDirFemRoupa = document.querySelector('#setadirfemroupa');
 const setaEsqrFemRoupa = document.querySelector('#setaesqfemroupa');
 const modeloFemRoupa = document.querySelector('.modelofemroupa1');
@@ -109,4 +121,71 @@ setaDirFemRoupa.addEventListener('click', function(){
 
 setaEsqrFemRoupa.addEventListener('click', function(){
     countFemRoupa = setaesquerda(countFemRoupa, modeloFemRoupa);
+})
+
+
+//  Geral Roupas feminina
+const setaDirGeralFem = document.querySelector('#setadirgeralfem');
+const setaEsqrGeralFem = document.querySelector('#setaesqgeralfem');
+const modeloGeralFem = document.querySelector('.modelogeralfem1');
+
+let countGeralFem = 0
+
+setaDirGeralFem.addEventListener('click', function(){
+    countGeralFem = setadireita(countGeralFem, modeloGeralFem);
+})
+
+
+setaEsqrGeralFem.addEventListener('click', function(){
+    countGeralFem = setaesquerda(countGeralFem, modeloGeralFem);
+})
+
+
+// Geral Roupas feminina
+const setaDirGeralMas = document.querySelector('#setadirgeralmas');
+const setaEsqrGeralMas = document.querySelector('#setaesqgeralmas');
+const modeloGeralMas = document.querySelector('.modelogeralmas1');
+
+let countGeralMas = 0
+
+setaDirGeralMas.addEventListener('click', function(){
+    countGeralMas = setadireita(countGeralMas, modeloGeralMas);
+})
+
+
+setaEsqrGeralMas.addEventListener('click', function(){
+    countGeralMas = setaesquerda(countGeralMas, modeloGeralMas);
+})
+
+
+// Praia Masculino
+const setaDirMasPraia = document.querySelector('#setadirmaspraia');
+const setaEsqrMasPraia = document.querySelector('#setaesqmaspraia');
+const modeloMasPraia = document.querySelector('.modelomaspraia1');
+
+let countMasPraia = 0
+
+setaDirMasPraia.addEventListener('click', function(){
+    countMasPraia = setadireita(countMasPraia, modeloMasPraia);
+})
+
+
+setaEsqrMasPraia.addEventListener('click', function(){
+    countMasPraia = setaesquerda(countMasPraia, modeloMasPraia);
+})
+
+// Praia Masculino
+const setaDirMasRoupa = document.querySelector('#setadirmasroupa');
+const setaEsqrMasRoupa = document.querySelector('#setaesqmasroupa');
+const modeloMasRoupa = document.querySelector('.modelomasroupa1');
+
+let countMasRoupa = 0
+
+setaDirMasRoupa.addEventListener('click', function(){
+    countMasRoupa = setadireita(countMasRoupa, modeloMasRoupa);
+})
+
+
+setaEsqrMasRoupa.addEventListener('click', function(){
+    countMasRoupa = setaesquerda(countMasRoupa, modeloMasRoupa);
 })

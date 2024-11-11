@@ -1,0 +1,216 @@
+/* Fontes */
+@font-face {
+    font-family: 'BreeSerif';
+    src: url(../fonts/BreeSerif/BreeSerif-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Shantell';
+    src: url(../fonts/Shantell/static/ShantellSans-Regular.ttf);
+}
+
+/* Configuração geral */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body, html{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Parte do header */
+header{
+    display: flex;
+    flex-direction: column;
+}
+
+#banner{
+    width: 100%;
+    height: auto;
+}
+
+#logo{
+    width: 40%;
+    align-self: center;
+    margin-top: -8%;
+    margin-bottom: 3%;
+}
+
+
+/* Navbar */
+#ImgNavbar{
+    position: absolute;
+    top: 0;
+    width: 10%;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(255, 105, 180, 0.7);
+}
+
+.Navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    background: linear-gradient(to right, #48A8F9 , #6a85d6, #D33699);
+    height: 0%;
+    width: 100%;
+    transition: height 0.5s ease;
+    z-index: 15;
+}
+
+.navbaritem{
+    height: auto;
+    margin-top: -6%;
+}
+
+.linkNav{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+    text-decoration: none;
+}
+
+.navbarIcons{
+    width: 20%;
+}
+
+
+.linkNav > h1{
+    font-family: 'Shantell';
+    &:not(.active){
+        color: white;
+    }
+}
+
+.active{
+    color: #3C06A2;
+}
+
+.wavenabar{
+    position: absolute;
+    bottom: 0;
+    width: 0%;
+    margin-bottom: -1%;
+}
+
+.OnWave{
+    width: 100%;
+}
+
+.On{
+    height: 35%;  
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); 
+    display: none; 
+    z-index: 10;
+    cursor: pointer;
+  }
+
+  .OnOverlay{
+    display: block; 
+  }
+
+
+/* Telas médias */
+@media screen and (max-width: 900px) {
+    #ImgNavbar{
+        width: 15%;
+        cursor: pointer;
+    }
+}
+
+
+  /* Telas pequenas */
+@media screen and (max-width: 630px) { 
+    /* Header */
+    #logo{
+        width: 50%;
+    }
+
+    #hrtilte{
+        width: 40%;
+    }
+
+    #title{
+        font-size: 25px;
+    }
+    
+    /* Navbar */
+    #ImgNavbar{
+        width: 20%;
+    }
+    .Navbar{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        height: 0%;
+        width: 100%;
+        overflow: hidden;
+        justify-content: center;
+        gap: 20px;
+        padding-bottom: 10%;    
+    }
+
+    .navbaritem{
+        margin-top: 1%;
+        max-height: 40%;
+        width: 50%;
+        
+    }
+    
+    .linkNav{
+        justify-content: start;
+    }
+
+    .navbaritem:first-child {
+        margin-top: 2%
+    }
+
+    .navbarIcons{
+        width: 23%;
+    }
+    
+
+    .linkNav > h1{
+        font-family: 'Shantell';
+        font-size: 200%;
+        &:not(.active){
+            color: white;
+        }
+    }
+    
+    .active{
+        color: #3C06A2;
+    }
+    
+    .wavenabar{
+        position: absolute;
+        bottom: 0;
+    
+    }
+
+    .On{
+        display: flex;
+        height: 40%;
+    }
+
+    .OnWave{
+        width: 140%;
+    }
+
+}

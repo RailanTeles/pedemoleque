@@ -21,6 +21,11 @@ body, html{
     overflow-x: hidden;
 }
 
+p{
+    font-family: 'BreeSerif';
+    font-size: 20px;
+}
+
 /* Parte do header */
 header{
     display: flex;
@@ -121,16 +126,129 @@ header{
     cursor: pointer;
   }
 
-  .OnOverlay{
+.OnOverlay{
     display: block; 
-  }
+}
 
+/* Article */
+.ArticleAcessory{
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+}
+
+/* Roupas */
+.SectionAcessory{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100%;
+    height: auto;
+    transition: margin-left 1.0s ease;
+}
+
+.subtitles{
+    font-size: 40px;
+    font-family: 'BreeSerif';
+}
+#hrtilte{
+    width: 30%;
+    height: 5px; 
+    background-color: black; 
+    align-self: center;
+    margin-bottom: 1%;
+}
+#long{
+    width: 60%;
+    height: 8px; 
+    background-color: black; 
+    align-self: center;
+    margin-bottom: 1%;
+}
+.acessories{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.setas{
+    display: none;
+}
+.carroussel{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+.modelos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 30%;
+    height: 500px;
+    margin: 2% 0%;
+}
+.imgmodelo{
+    width: 70%;
+    height: 70%;
+}
+.desc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-top: auto;
+    width: 60%;
+    height: 30%;
+}
+
+.preco{
+    background-color: #3C06A2;
+    color: white;
+    padding: 5%;
+    border-radius: 10px;
+}
+
+.wavedown{
+    width: 120%;
+    margin-bottom: -10%;
+}
 
 /* Telas médias */
 @media screen and (max-width: 900px) {
     #ImgNavbar{
         width: 15%;
         cursor: pointer;
+    }
+    /* Carrousel */
+    .acessories{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+    .setas{
+        display: flex;
+        width: 10%;
+    }
+    .carroussel{
+        flex-wrap: nowrap;
+        width: 70%;
+        height: 100%;
+        align-items: center;
+        justify-content: start;
+        overflow: hidden;
+    }
+    .modelos{
+        min-width: 100%;
+        height: 600px;
+        align-items: center;
+        transition: margin-left 0.5s ease; 
     }
 }
 
@@ -213,4 +331,11 @@ header{
         width: 140%;
     }
 
+    /* Acesorios */
+    .modelos{
+        min-width: 100%;
+        height: 350px;
+        align-items: center;
+        transition: margin-left 0.5s ease; 
+    }
 }
